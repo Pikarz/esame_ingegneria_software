@@ -1,0 +1,5 @@
+LOG_SUCCESS       | info    | The initialization finished successfully without homotopy method.
+[/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/2/monitor1.mo:39:5-39:87:writable]
+stdout            | info    | Simulation call terminate() at time 10000.000001
+|                 | |       | Message : Standard deviation completion time small enough for reliable estimate
+LOG_SUCCESS       | info    | The simulation finished successfully.
