@@ -1,0 +1,1328 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+
+<!-- description of the model interface using an extention of the FMI standard -->
+<fmiModelDescription
+  fmiVersion                          = "1.0"
+
+  modelName                           = "System"
+  modelIdentifier                     = "System"
+
+  OPENMODELICAHOME                    = "/usr/bin/.."
+
+  guid                                = "{340912f8-8e71-4348-9bac-842be0d591e5}"
+
+  description                         = ""
+  generationTool                      = "OpenModelica Compiler OpenModelica 1.20.0"
+  generationDateAndTime               = "2023-01-20T18:11:46Z"
+
+  variableNamingConvention            = "structured"
+
+  numberOfEventIndicators             = "1"  cmt_numberOfEventIndicators             = "NG:       number of zero crossings,                           FMI"
+  numberOfTimeEvents                  = "1"  cmt_numberOfTimeEvents                  = "NG_SAM:   number of zero crossings that are samples,          OMC"
+
+  numberOfInputVariables              = "0"  cmt_numberOfInputVariables              = "NI:       number of inputvar on topmodel,                     OMC"
+  numberOfOutputVariables             = "0"  cmt_numberOfOutputVariables             = "NO:       number of outputvar on topmodel,                    OMC"
+
+  numberOfExternalObjects             = "0"  cmt_numberOfExternalObjects             = "NEXT:     number of external objects,                         OMC"
+  numberOfFunctions                   = "19"  cmt_numberOfFunctions                   = "NFUNC:    number of functions used by the simulation,         OMC"
+
+  numberOfContinuousStates            = "0"  cmt_numberOfContinuousStates            = "NX:       number of states,                                   FMI"
+  numberOfRealAlgebraicVariables      = "50"  cmt_numberOfRealAlgebraicVariables      = "NY:       number of real variables,                           OMC"
+  numberOfRealAlgebraicAliasVariables = "0"  cmt_numberOfRealAlgebraicAliasVariables = "NA:       number of alias variables,                          OMC"
+  numberOfRealParameters              = "0"  cmt_numberOfRealParameters              = "NP:       number of parameters,                               OMC"
+
+  numberOfIntegerAlgebraicVariables   = "10"  cmt_numberOfIntegerAlgebraicVariables   = "NYINT:    number of alg. int variables,                       OMC"
+  numberOfIntegerAliasVariables       = "5"  cmt_numberOfIntegerAliasVariables       = "NAINT:    number of alias int variables,                      OMC"
+  numberOfIntegerParameters           = "36"  cmt_numberOfIntegerParameters           = "NPINT:    number of int parameters,                           OMC"
+
+  numberOfStringAlgebraicVariables    = "0"  cmt_numberOfStringAlgebraicVariables    = "NYSTR:    number of alg. string variables,                    OMC"
+  numberOfStringAliasVariables        = "0"  cmt_numberOfStringAliasVariables        = "NASTR:    number of alias string variables,                   OMC"
+  numberOfStringParameters            = "0"  cmt_numberOfStringParameters            = "NPSTR:    number of string parameters,                        OMC"
+
+  numberOfBooleanAlgebraicVariables   = "13"  cmt_numberOfBooleanAlgebraicVariables   = "NYBOOL:   number of alg. bool variables,                      OMC"
+  numberOfBooleanAliasVariables       = "0"  cmt_numberOfBooleanAliasVariables       = "NABOOL:   number of alias bool variables,                     OMC"
+  numberOfBooleanParameters           = "0"  cmt_numberOfBooleanParameters           = "NPBOOL:   number of bool parameters,                          OMC" >
+
+
+  <!-- startTime, stopTime, tolerance are FMI specific, all others are OMC specific -->
+  <DefaultExperiment
+    startTime      = "0"
+    stopTime       = "10000"
+    stepSize       = "20"
+    tolerance      = "1e-06"
+    solver        = "dassl"
+    outputFormat      = "mat"
+    variableFilter      = ".*" />
+
+  <!-- variables in the model -->
+  <ModelVariables>
+
+  <ScalarVariable
+    name = "m1.Avgcost[1]"
+    valueReference = "1000"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "26" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.Avgcost[2]"
+    valueReference = "1001"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "26" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.Avgcost[3]"
+    valueReference = "1002"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "26" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.Avgcost[4]"
+    valueReference = "1003"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "26" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.Avgcost[5]"
+    valueReference = "1004"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "4" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "26" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.StdDevCost[1]"
+    valueReference = "1005"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "5" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "29" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.StdDevCost[2]"
+    valueReference = "1006"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "6" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "29" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.StdDevCost[3]"
+    valueReference = "1007"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "7" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "29" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.StdDevCost[4]"
+    valueReference = "1008"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "8" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "29" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.StdDevCost[5]"
+    valueReference = "1009"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "9" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "29" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.y[1]"
+    valueReference = "1010"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "10" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.y[2]"
+    valueReference = "1011"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "11" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.y[3]"
+    valueReference = "1012"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "12" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.y[4]"
+    valueReference = "1013"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "13" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.y[5]"
+    valueReference = "1014"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "14" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.z[1]"
+    valueReference = "1015"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "15" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.z[2]"
+    valueReference = "1016"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "16" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.z[3]"
+    valueReference = "1017"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "17" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.z[4]"
+    valueReference = "1018"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "18" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.z[5]"
+    valueReference = "1019"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "19" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "19" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].TimeLastDelivery"
+    valueReference = "1020"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "20" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "22" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].TimeLastDelivery"
+    valueReference = "1021"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "21" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "22" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].TimeLastDelivery"
+    valueReference = "1022"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "22" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "22" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].TimeLastDelivery"
+    valueReference = "1023"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "23" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "22" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].TimeLastDelivery"
+    valueReference = "1024"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "24" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "22" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].Var"
+    valueReference = "1025"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "25" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "9" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].Var"
+    valueReference = "1026"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "26" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "9" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].Var"
+    valueReference = "1027"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "27" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "9" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].Var"
+    valueReference = "1028"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "28" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "9" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].Var"
+    valueReference = "1029"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "29" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "9" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].v"
+    valueReference = "1030"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "30" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "7" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].v"
+    valueReference = "1031"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "31" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "7" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].v"
+    valueReference = "1032"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "32" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "7" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].v"
+    valueReference = "1033"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "33" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "7" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].v"
+    valueReference = "1034"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "34" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "7" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].y"
+    valueReference = "1035"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "35" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].y"
+    valueReference = "1036"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "36" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].y"
+    valueReference = "1037"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "37" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].y"
+    valueReference = "1038"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "38" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].y"
+    valueReference = "1039"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "39" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].y2"
+    valueReference = "1040"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "40" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "8" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].y2"
+    valueReference = "1041"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "41" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "8" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].y2"
+    valueReference = "1042"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "42" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "8" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].y2"
+    valueReference = "1043"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "43" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "8" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].y2"
+    valueReference = "1044"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "44" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "8" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].z"
+    valueReference = "1045"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "45" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].z"
+    valueReference = "1046"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "46" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].z"
+    valueReference = "1047"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "47" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].z"
+    valueReference = "1048"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "48" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].z"
+    valueReference = "1049"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "49" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].counter"
+    valueReference = "1050"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "16" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].counter"
+    valueReference = "1051"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "16" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].counter"
+    valueReference = "1052"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "16" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].counter"
+    valueReference = "1053"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "16" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].counter"
+    valueReference = "1054"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "4" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "16" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.x[1]"
+    valueReference = "1055"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "5" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/dtmc.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "21" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.x[2]"
+    valueReference = "1056"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "6" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/dtmc.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "21" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.x[3]"
+    valueReference = "1057"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "7" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/dtmc.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "21" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.x[4]"
+    valueReference = "1058"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "8" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/dtmc.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "21" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.x[5]"
+    valueReference = "1059"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "9" classType = "iAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/dtmc.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "21" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "Prm.ID"
+    valueReference = "1060"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "0" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "31" fileWritable = "true">
+    <Integer start="1960447" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "Prm.MyMagicNumber"
+    valueReference = "1061"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "51" fileWritable = "true">
+    <Integer fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "Prm.N"
+    valueReference = "1062"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "2" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "25" fileWritable = "true">
+    <Integer start="10" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.A"
+    valueReference = "1063"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "3" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.B"
+    valueReference = "1064"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "4" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.C"
+    valueReference = "1065"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "5" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.D"
+    valueReference = "1066"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "6" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.F"
+    valueReference = "1067"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "7" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.G"
+    valueReference = "1068"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "8" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "18" startColumn = "1" endLine = "18" endColumn = "24" fileWritable = "true">
+    <Integer start="2" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.ID"
+    valueReference = "1069"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "9" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "31" fileWritable = "true">
+    <Integer start="1960447" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.MyMagicNumber"
+    valueReference = "1070"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "10" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "51" fileWritable = "true">
+    <Integer fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.N"
+    valueReference = "1071"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "11" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "25" fileWritable = "true">
+    <Integer start="10" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.T"
+    valueReference = "1072"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "12" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "19" startColumn = "1" endLine = "19" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.p.W"
+    valueReference = "1073"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "13" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "24" fileWritable = "true">
+    <Integer start="5" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.A"
+    valueReference = "1074"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "14" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.B"
+    valueReference = "1075"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "15" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.C"
+    valueReference = "1076"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "16" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.D"
+    valueReference = "1077"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "17" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.F"
+    valueReference = "1078"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "18" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.G"
+    valueReference = "1079"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "19" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "18" startColumn = "1" endLine = "18" endColumn = "24" fileWritable = "true">
+    <Integer start="2" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.ID"
+    valueReference = "1080"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "20" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "31" fileWritable = "true">
+    <Integer start="1960447" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.MyMagicNumber"
+    valueReference = "1081"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "21" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "51" fileWritable = "true">
+    <Integer fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.N"
+    valueReference = "1082"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "22" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "25" fileWritable = "true">
+    <Integer start="10" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.T"
+    valueReference = "1083"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "23" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "19" startColumn = "1" endLine = "19" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "mc.p.W"
+    valueReference = "1084"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "24" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "24" fileWritable = "true">
+    <Integer start="5" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.A"
+    valueReference = "1085"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "25" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.B"
+    valueReference = "1086"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "26" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.C"
+    valueReference = "1087"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "27" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.D"
+    valueReference = "1088"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "28" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.F"
+    valueReference = "1089"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "29" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.G"
+    valueReference = "1090"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "30" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "18" startColumn = "1" endLine = "18" endColumn = "24" fileWritable = "true">
+    <Integer start="2" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.ID"
+    valueReference = "1091"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "31" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "31" fileWritable = "true">
+    <Integer start="1960447" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.MyMagicNumber"
+    valueReference = "1092"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "32" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "51" fileWritable = "true">
+    <Integer fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.N"
+    valueReference = "1093"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "33" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "25" fileWritable = "true">
+    <Integer start="10" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.T"
+    valueReference = "1094"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "34" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "19" startColumn = "1" endLine = "19" endColumn = "24" fileWritable = "true">
+    <Integer start="1" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "p.W"
+    valueReference = "1095"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "35" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/parameters.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "24" fileWritable = "true">
+    <Integer start="5" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].x"
+    valueReference = "1096"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="mc.x[1]" aliasVariableId="5"
+    classIndex = "0" classType = "iAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "15" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].x"
+    valueReference = "1097"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="mc.x[2]" aliasVariableId="6"
+    classIndex = "1" classType = "iAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "15" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].x"
+    valueReference = "1098"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="mc.x[3]" aliasVariableId="7"
+    classIndex = "2" classType = "iAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "15" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].x"
+    valueReference = "1099"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="mc.x[4]" aliasVariableId="8"
+    classIndex = "3" classType = "iAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "15" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].x"
+    valueReference = "1100"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="mc.x[5]" aliasVariableId="9"
+    classIndex = "4" classType = "iAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "15" fileWritable = "true">
+    <Integer fixed="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition1"
+    valueReference = "1101"
+    description = "ct1[5].delivery and not pre(ct1[5].delivery)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "34" startColumn = "1" endLine = "49" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition2"
+    valueReference = "1102"
+    description = "ct1[4].delivery and not pre(ct1[4].delivery)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "34" startColumn = "1" endLine = "49" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition3"
+    valueReference = "1103"
+    description = "ct1[3].delivery and not pre(ct1[3].delivery)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "34" startColumn = "1" endLine = "49" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition4"
+    valueReference = "1104"
+    description = "ct1[2].delivery and not pre(ct1[2].delivery)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "34" startColumn = "1" endLine = "49" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition5"
+    valueReference = "1105"
+    description = "ct1[1].delivery and not pre(ct1[1].delivery)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "4" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "34" startColumn = "1" endLine = "49" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition6"
+    valueReference = "1106"
+    description = "time &gt; 4000.0"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "5" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "34" startColumn = "1" endLine = "60" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition7"
+    valueReference = "1107"
+    description = "sample(1, 0.0, /*Real*/(mc.p.T))"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "6" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/dtmc.mo" startLine = "11" startColumn = "1" endLine = "23" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[1].delivery"
+    valueReference = "1108"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "7" classType = "bAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "17" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[2].delivery"
+    valueReference = "1109"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "8" classType = "bAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "17" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[3].delivery"
+    valueReference = "1110"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "9" classType = "bAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "17" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[4].delivery"
+    valueReference = "1111"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "10" classType = "bAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "17" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ct1[5].delivery"
+    valueReference = "1112"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "11" classType = "bAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/completion-time.mo" startLine = "11" startColumn = "1" endLine = "11" endColumn = "17" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m1.endCondition"
+    valueReference = "1113"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "12" classType = "bAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/1/monitor.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "21" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+
+
+
+  </ModelVariables>
+
+
+</fmiModelDescription>
+
