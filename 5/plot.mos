@@ -1,0 +1,30 @@
+plot({
+    user.r[1],
+    user.r[2],
+    user.r[3],
+
+    plant.x[1],
+    plant.x[2],
+    plant.x[3],
+    plant.v[1],
+    plant.v[2],
+    plant.v[3],
+
+    ctr.u[1],
+    ctr.u[1],
+    ctr.u[2],
+    
+    m.e[1],
+    m.e[2],
+    m.e[3],
+
+    m.StdDevErr[1],
+    m.StdDevErr[2],
+    m.StdDevErr[3],
+
+    m.AvgErr[1],
+    m.AvgErr[2],
+    m.AvgErr[3]
+}, externalWindow=true, fileName="System_res.mat");
+
+getErrorString();

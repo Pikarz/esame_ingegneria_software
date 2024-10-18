@@ -1,0 +1,1657 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+
+<!-- description of the model interface using an extention of the FMI standard -->
+<fmiModelDescription
+  fmiVersion                          = "1.0"
+
+  modelName                           = "System"
+  modelIdentifier                     = "System"
+
+  OPENMODELICAHOME                    = "/usr/bin/.."
+
+  guid                                = "{8772a482-2616-44e6-a016-6a71da249581}"
+
+  description                         = ""
+  generationTool                      = "OpenModelica Compiler OpenModelica 1.20.0"
+  generationDateAndTime               = "2023-01-20T18:12:12Z"
+
+  variableNamingConvention            = "structured"
+
+  numberOfEventIndicators             = "1"  cmt_numberOfEventIndicators             = "NG:       number of zero crossings,                           FMI"
+  numberOfTimeEvents                  = "3"  cmt_numberOfTimeEvents                  = "NG_SAM:   number of zero crossings that are samples,          OMC"
+
+  numberOfInputVariables              = "0"  cmt_numberOfInputVariables              = "NI:       number of inputvar on topmodel,                     OMC"
+  numberOfOutputVariables             = "0"  cmt_numberOfOutputVariables             = "NO:       number of outputvar on topmodel,                    OMC"
+
+  numberOfExternalObjects             = "0"  cmt_numberOfExternalObjects             = "NEXT:     number of external objects,                         OMC"
+  numberOfFunctions                   = "14"  cmt_numberOfFunctions                   = "NFUNC:    number of functions used by the simulation,         OMC"
+
+  numberOfContinuousStates            = "15"  cmt_numberOfContinuousStates            = "NX:       number of states,                                   FMI"
+  numberOfRealAlgebraicVariables      = "32"  cmt_numberOfRealAlgebraicVariables      = "NY:       number of real variables,                           OMC"
+  numberOfRealAlgebraicAliasVariables = "29"  cmt_numberOfRealAlgebraicAliasVariables = "NA:       number of alias variables,                          OMC"
+  numberOfRealParameters              = "38"  cmt_numberOfRealParameters              = "NP:       number of parameters,                               OMC"
+
+  numberOfIntegerAlgebraicVariables   = "0"  cmt_numberOfIntegerAlgebraicVariables   = "NYINT:    number of alg. int variables,                       OMC"
+  numberOfIntegerAliasVariables       = "0"  cmt_numberOfIntegerAliasVariables       = "NAINT:    number of alias int variables,                      OMC"
+  numberOfIntegerParameters           = "6"  cmt_numberOfIntegerParameters           = "NPINT:    number of int parameters,                           OMC"
+
+  numberOfStringAlgebraicVariables    = "0"  cmt_numberOfStringAlgebraicVariables    = "NYSTR:    number of alg. string variables,                    OMC"
+  numberOfStringAliasVariables        = "0"  cmt_numberOfStringAliasVariables        = "NASTR:    number of alias string variables,                   OMC"
+  numberOfStringParameters            = "0"  cmt_numberOfStringParameters            = "NPSTR:    number of string parameters,                        OMC"
+
+  numberOfBooleanAlgebraicVariables   = "4"  cmt_numberOfBooleanAlgebraicVariables   = "NYBOOL:   number of alg. bool variables,                      OMC"
+  numberOfBooleanAliasVariables       = "0"  cmt_numberOfBooleanAliasVariables       = "NABOOL:   number of alias bool variables,                     OMC"
+  numberOfBooleanParameters           = "0"  cmt_numberOfBooleanParameters           = "NPBOOL:   number of bool parameters,                          OMC" >
+
+
+  <!-- startTime, stopTime, tolerance are FMI specific, all others are OMC specific -->
+  <DefaultExperiment
+    startTime      = "0"
+    stopTime       = "10000"
+    stepSize       = "20"
+    tolerance      = "1e-06"
+    solver        = "dassl"
+    outputFormat      = "mat"
+    variableFilter      = ".*" />
+
+  <!-- variables in the model -->
+  <ModelVariables>
+
+  <ScalarVariable
+    name = "m.mean1.mu"
+    valueReference = "1000"
+    description = "Internal integrator variable"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "0" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2310" startColumn = "5" endLine = "2310" endColumn = "43" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean2.mu"
+    valueReference = "1001"
+    description = "Internal integrator variable"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "1" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2310" startColumn = "5" endLine = "2310" endColumn = "43" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean3.mu"
+    valueReference = "1002"
+    description = "Internal integrator variable"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "2" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2310" startColumn = "5" endLine = "2310" endColumn = "43" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.variance.mu"
+    valueReference = "1003"
+    description = "Mean value (state variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "3" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2430" startColumn = "5" endLine = "2430" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.variance.var"
+    valueReference = "1004"
+    description = "Variance (state variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "4" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2431" startColumn = "5" endLine = "2431" endColumn = "41" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.variance.mu"
+    valueReference = "1005"
+    description = "Mean value (state variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "5" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2430" startColumn = "5" endLine = "2430" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.variance.var"
+    valueReference = "1006"
+    description = "Variance (state variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "6" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2431" startColumn = "5" endLine = "2431" endColumn = "41" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.variance.mu"
+    valueReference = "1007"
+    description = "Mean value (state variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "7" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2430" startColumn = "5" endLine = "2430" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.variance.var"
+    valueReference = "1008"
+    description = "Variance (state variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "8" classType = "rSta"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2431" startColumn = "5" endLine = "2431" endColumn = "41" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.v[1]"
+    valueReference = "1009"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "9" classType = "rSta"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.v[2]"
+    valueReference = "1010"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "10" classType = "rSta"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.v[3]"
+    valueReference = "1011"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "11" classType = "rSta"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.x[1]"
+    valueReference = "1012"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "12" classType = "rSta"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.x[2]"
+    valueReference = "1013"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "13" classType = "rSta"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.x[3]"
+    valueReference = "1014"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "14" classType = "rSta"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.mean1.mu)"
+    valueReference = "1015"
+    description = "der(Internal integrator variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2310" startColumn = "5" endLine = "2310" endColumn = "43" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.mean2.mu)"
+    valueReference = "1016"
+    description = "der(Internal integrator variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2310" startColumn = "5" endLine = "2310" endColumn = "43" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.mean3.mu)"
+    valueReference = "1017"
+    description = "der(Internal integrator variable)"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2310" startColumn = "5" endLine = "2310" endColumn = "43" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.std1.variance.mu)"
+    valueReference = "1018"
+    description = "der(Mean value (state variable))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2430" startColumn = "5" endLine = "2430" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.std1.variance.var)"
+    valueReference = "1019"
+    description = "der(Variance (state variable))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "4" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2431" startColumn = "5" endLine = "2431" endColumn = "41" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.std2.variance.mu)"
+    valueReference = "1020"
+    description = "der(Mean value (state variable))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "5" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2430" startColumn = "5" endLine = "2430" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.std2.variance.var)"
+    valueReference = "1021"
+    description = "der(Variance (state variable))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "6" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2431" startColumn = "5" endLine = "2431" endColumn = "41" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.std3.variance.mu)"
+    valueReference = "1022"
+    description = "der(Mean value (state variable))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "7" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2430" startColumn = "5" endLine = "2430" endColumn = "42" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(m.std3.variance.var)"
+    valueReference = "1023"
+    description = "der(Variance (state variable))"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "8" classType = "rDer"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2431" startColumn = "5" endLine = "2431" endColumn = "41" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(plant.v[1])"
+    valueReference = "1024"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "9" classType = "rDer"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(plant.v[2])"
+    valueReference = "1025"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "10" classType = "rDer"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(plant.v[3])"
+    valueReference = "1026"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "11" classType = "rDer"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(plant.x[1])"
+    valueReference = "1027"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "12" classType = "rDer"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(plant.x[2])"
+    valueReference = "1028"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "13" classType = "rDer"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "der(plant.x[3])"
+    valueReference = "1029"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "14" classType = "rDer"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.AvgErr[1]"
+    valueReference = "1030"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "21" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.AvgErr[2]"
+    valueReference = "1031"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "21" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.AvgErr[3]"
+    valueReference = "1032"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "21" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.StdDevErr[1]"
+    valueReference = "1033"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "18" startColumn = "1" endLine = "18" endColumn = "24" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.StdDevErr[2]"
+    valueReference = "1034"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "4" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "18" startColumn = "1" endLine = "18" endColumn = "24" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.StdDevErr[3]"
+    valueReference = "1035"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "5" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "18" startColumn = "1" endLine = "18" endColumn = "24" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean1.u"
+    valueReference = "1036"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "6" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2304" startColumn = "5" endLine = "2304" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean2.u"
+    valueReference = "1037"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "7" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2304" startColumn = "5" endLine = "2304" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean3.u"
+    valueReference = "1038"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "8" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2304" startColumn = "5" endLine = "2304" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.r[1]"
+    valueReference = "1039"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "9" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "15" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.r[2]"
+    valueReference = "1040"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "10" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "15" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.r[3]"
+    valueReference = "1041"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "11" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "15" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.sqrt1.u"
+    valueReference = "1042"
+    description = "Connector of Real input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "12" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Interfaces.mo" startLine = "327" startColumn = "5" endLine = "328" endColumn = "58" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.variance.u"
+    valueReference = "1043"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "13" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2426" startColumn = "5" endLine = "2426" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.sqrt1.u"
+    valueReference = "1044"
+    description = "Connector of Real input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "14" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Interfaces.mo" startLine = "327" startColumn = "5" endLine = "328" endColumn = "58" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.variance.u"
+    valueReference = "1045"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "15" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2426" startColumn = "5" endLine = "2426" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.sqrt1.u"
+    valueReference = "1046"
+    description = "Connector of Real input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "16" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Interfaces.mo" startLine = "327" startColumn = "5" endLine = "328" endColumn = "58" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.variance.u"
+    valueReference = "1047"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "17" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2426" startColumn = "5" endLine = "2426" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.x[1]"
+    valueReference = "1048"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "18" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.x[2]"
+    valueReference = "1049"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "19" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.x[3]"
+    valueReference = "1050"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "20" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "user.r[1]"
+    valueReference = "1051"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "21" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/user.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "user.r[2]"
+    valueReference = "1052"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "22" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/user.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "user.r[3]"
+    valueReference = "1053"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "23" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/user.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.u[1]"
+    valueReference = "1054"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "24" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.u[2]"
+    valueReference = "1055"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "25" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.u[3]"
+    valueReference = "1056"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "26" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.e[1]"
+    valueReference = "1057"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "27" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.e[2]"
+    valueReference = "1058"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "28" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.e[3]"
+    valueReference = "1059"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "29" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "16" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "wind.wind_value1"
+    valueReference = "1060"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "30" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/wind.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "23" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "wind.wind_value2"
+    valueReference = "1061"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "31" classType = "rAlg"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/wind.mo" startLine = "5" startColumn = "1" endLine = "5" endColumn = "23" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "Prm.T"
+    valueReference = "1062"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "0" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "25" fileWritable = "true">
+    <Real start="0.001" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "Prm.Tw"
+    valueReference = "1063"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "1" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "24" fileWritable = "true">
+    <Real start="0.1" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.HORIZON"
+    valueReference = "1064"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "2" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "28" fileWritable = "true">
+    <Real start="50.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.T"
+    valueReference = "1065"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "3" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "25" fileWritable = "true">
+    <Real start="0.001" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.Tw"
+    valueReference = "1066"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "4" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "24" fileWritable = "true">
+    <Real start="0.1" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.g"
+    valueReference = "1067"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "5" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "24" fileWritable = "true">
+    <Real start="9.81" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.k1"
+    valueReference = "1068"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "6" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "27" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.k2"
+    valueReference = "1069"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "7" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "24" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.p"
+    valueReference = "1070"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "8" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "22" fileWritable = "true">
+    <Real start="-1.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean1.t_0"
+    valueReference = "1071"
+    description = "Start time"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "9" classType = "rPar"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2311" startColumn = "5" endLine = "2311" endColumn = "49" fileWritable = "true">
+    <Real start="0.0" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean1.t_eps"
+    valueReference = "1072"
+    description = "Mean value calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "10" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2300" startColumn = "5" endLine = "2302" endColumn = "43" fileWritable = "true">
+    <Real start="1e-07" fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean2.t_0"
+    valueReference = "1073"
+    description = "Start time"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "11" classType = "rPar"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2311" startColumn = "5" endLine = "2311" endColumn = "49" fileWritable = "true">
+    <Real start="0.0" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean2.t_eps"
+    valueReference = "1074"
+    description = "Mean value calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "12" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2300" startColumn = "5" endLine = "2302" endColumn = "43" fileWritable = "true">
+    <Real start="1e-07" fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean3.t_0"
+    valueReference = "1075"
+    description = "Start time"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "13" classType = "rPar"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2311" startColumn = "5" endLine = "2311" endColumn = "49" fileWritable = "true">
+    <Real start="0.0" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean3.t_eps"
+    valueReference = "1076"
+    description = "Mean value calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "14" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2300" startColumn = "5" endLine = "2302" endColumn = "43" fileWritable = "true">
+    <Real start="1e-07" fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.HORIZON"
+    valueReference = "1077"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "15" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "28" fileWritable = "true">
+    <Real start="50.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.T"
+    valueReference = "1078"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "16" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "25" fileWritable = "true">
+    <Real start="0.001" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.Tw"
+    valueReference = "1079"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "17" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "24" fileWritable = "true">
+    <Real start="0.1" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.g"
+    valueReference = "1080"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "18" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "24" fileWritable = "true">
+    <Real start="9.81" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.k1"
+    valueReference = "1081"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "19" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "27" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.k2"
+    valueReference = "1082"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "20" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "24" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.p"
+    valueReference = "1083"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "21" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "22" fileWritable = "true">
+    <Real start="-1.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.t_eps"
+    valueReference = "1084"
+    description = "Standard deviation calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "22" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2513" startColumn = "5" endLine = "2515" endColumn = "43" fileWritable = "true">
+    <Real start="1e-07" fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.variance.t_0"
+    valueReference = "1085"
+    description = "Start time"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "23" classType = "rPar"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2432" startColumn = "5" endLine = "2432" endColumn = "49" fileWritable = "true">
+    <Real start="0.0" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.variance.t_eps"
+    valueReference = "1086"
+    description = "Variance calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "24" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2422" startColumn = "5" endLine = "2424" endColumn = "43" fileWritable = "true">
+    <Real fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.t_eps"
+    valueReference = "1087"
+    description = "Standard deviation calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "25" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2513" startColumn = "5" endLine = "2515" endColumn = "43" fileWritable = "true">
+    <Real start="1e-07" fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.variance.t_0"
+    valueReference = "1088"
+    description = "Start time"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "26" classType = "rPar"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2432" startColumn = "5" endLine = "2432" endColumn = "49" fileWritable = "true">
+    <Real start="0.0" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.variance.t_eps"
+    valueReference = "1089"
+    description = "Variance calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "27" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2422" startColumn = "5" endLine = "2424" endColumn = "43" fileWritable = "true">
+    <Real fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.t_eps"
+    valueReference = "1090"
+    description = "Standard deviation calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "28" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2513" startColumn = "5" endLine = "2515" endColumn = "43" fileWritable = "true">
+    <Real start="1e-07" fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.variance.t_0"
+    valueReference = "1091"
+    description = "Start time"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "29" classType = "rPar"
+    isProtected = "true" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2432" startColumn = "5" endLine = "2432" endColumn = "49" fileWritable = "true">
+    <Real start="0.0" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.variance.t_eps"
+    valueReference = "1092"
+    description = "Variance calculation starts at startTime + t_eps"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "30" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2422" startColumn = "5" endLine = "2424" endColumn = "43" fileWritable = "true">
+    <Real fixed="true" useNominal="false" min="1e-13" unit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.HORIZON"
+    valueReference = "1093"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "31" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "17" startColumn = "1" endLine = "17" endColumn = "28" fileWritable = "true">
+    <Real start="50.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.T"
+    valueReference = "1094"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "32" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "12" startColumn = "1" endLine = "12" endColumn = "25" fileWritable = "true">
+    <Real start="0.001" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.Tw"
+    valueReference = "1095"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "33" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "13" startColumn = "1" endLine = "13" endColumn = "24" fileWritable = "true">
+    <Real start="0.1" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.g"
+    valueReference = "1096"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "34" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "10" startColumn = "1" endLine = "10" endColumn = "24" fileWritable = "true">
+    <Real start="9.81" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.k1"
+    valueReference = "1097"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "35" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "15" startColumn = "1" endLine = "15" endColumn = "27" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.k2"
+    valueReference = "1098"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "36" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "16" startColumn = "1" endLine = "16" endColumn = "24" fileWritable = "true">
+    <Real fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.p"
+    valueReference = "1099"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "37" classType = "rPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "14" startColumn = "1" endLine = "14" endColumn = "22" fileWritable = "true">
+    <Real start="-1.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.r[1]"
+    valueReference = "1100"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="user.r[1]" aliasVariableId="51"
+    classIndex = "0" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.r[2]"
+    valueReference = "1101"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="user.r[2]" aliasVariableId="52"
+    classIndex = "1" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.r[3]"
+    valueReference = "1102"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="user.r[3]" aliasVariableId="53"
+    classIndex = "2" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.v[1]"
+    valueReference = "1103"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="plant.v[1]" aliasVariableId="9"
+    classIndex = "3" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.v[2]"
+    valueReference = "1104"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="plant.v[2]" aliasVariableId="10"
+    classIndex = "4" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.v[3]"
+    valueReference = "1105"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="plant.v[3]" aliasVariableId="11"
+    classIndex = "5" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.x[1]"
+    valueReference = "1106"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="plant.x[1]" aliasVariableId="12"
+    classIndex = "6" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.x[2]"
+    valueReference = "1107"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="plant.x[2]" aliasVariableId="13"
+    classIndex = "7" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.x[3]"
+    valueReference = "1108"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="plant.x[3]" aliasVariableId="14"
+    classIndex = "8" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean1.y"
+    valueReference = "1109"
+    description = "Expectation (mean) value of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.AvgErr[1]" aliasVariableId="30"
+    classIndex = "9" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2305" startColumn = "5" endLine = "2307" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean2.y"
+    valueReference = "1110"
+    description = "Expectation (mean) value of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.AvgErr[2]" aliasVariableId="31"
+    classIndex = "10" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2305" startColumn = "5" endLine = "2307" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.mean3.y"
+    valueReference = "1111"
+    description = "Expectation (mean) value of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.AvgErr[3]" aliasVariableId="32"
+    classIndex = "11" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2305" startColumn = "5" endLine = "2307" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.sqrt1.y"
+    valueReference = "1112"
+    description = "Connector of Real output signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.StdDevErr[1]" aliasVariableId="33"
+    classIndex = "12" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Interfaces.mo" startLine = "329" startColumn = "5" endLine = "330" endColumn = "56" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.u"
+    valueReference = "1113"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.e[1]" aliasVariableId="57"
+    classIndex = "13" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2517" startColumn = "5" endLine = "2517" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.variance.y"
+    valueReference = "1114"
+    description = "Variance of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.std1.sqrt1.u" aliasVariableId="42"
+    classIndex = "14" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2427" startColumn = "5" endLine = "2428" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std1.y"
+    valueReference = "1115"
+    description = "Standard deviation of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.StdDevErr[1]" aliasVariableId="33"
+    classIndex = "15" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2518" startColumn = "5" endLine = "2520" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.sqrt1.y"
+    valueReference = "1116"
+    description = "Connector of Real output signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.StdDevErr[2]" aliasVariableId="34"
+    classIndex = "16" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Interfaces.mo" startLine = "329" startColumn = "5" endLine = "330" endColumn = "56" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.u"
+    valueReference = "1117"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.e[2]" aliasVariableId="58"
+    classIndex = "17" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2517" startColumn = "5" endLine = "2517" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.variance.y"
+    valueReference = "1118"
+    description = "Variance of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.std2.sqrt1.u" aliasVariableId="44"
+    classIndex = "18" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2427" startColumn = "5" endLine = "2428" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std2.y"
+    valueReference = "1119"
+    description = "Standard deviation of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.StdDevErr[2]" aliasVariableId="34"
+    classIndex = "19" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2518" startColumn = "5" endLine = "2520" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.sqrt1.y"
+    valueReference = "1120"
+    description = "Connector of Real output signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.StdDevErr[3]" aliasVariableId="35"
+    classIndex = "20" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Interfaces.mo" startLine = "329" startColumn = "5" endLine = "330" endColumn = "56" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.u"
+    valueReference = "1121"
+    description = "Noisy input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.e[3]" aliasVariableId="59"
+    classIndex = "21" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2517" startColumn = "5" endLine = "2517" endColumn = "134" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.variance.y"
+    valueReference = "1122"
+    description = "Variance of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.std3.sqrt1.u" aliasVariableId="46"
+    classIndex = "22" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2427" startColumn = "5" endLine = "2428" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.std3.y"
+    valueReference = "1123"
+    description = "Standard deviation of the input signal"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="m.StdDevErr[3]" aliasVariableId="35"
+    classIndex = "23" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/.openmodelica/libraries/Modelica 4.0.0+maint.om/Blocks/Math.mo" startLine = "2518" startColumn = "5" endLine = "2520" endColumn = "74" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.u[1]"
+    valueReference = "1124"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="ctr.u[1]" aliasVariableId="54"
+    classIndex = "24" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.u[2]"
+    valueReference = "1125"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="ctr.u[2]" aliasVariableId="55"
+    classIndex = "25" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.u[3]"
+    valueReference = "1126"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="ctr.u[3]" aliasVariableId="56"
+    classIndex = "26" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "7" startColumn = "1" endLine = "7" endColumn = "15" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.w1"
+    valueReference = "1127"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="wind.wind_value1" aliasVariableId="60"
+    classIndex = "27" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "8" startColumn = "1" endLine = "8" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.w2"
+    valueReference = "1128"
+    variability = "continuous" isDiscrete = "false"
+    causality = "local" isValueChangeable = "false"
+    alias = "alias" aliasVariable="wind.wind_value2" aliasVariableId="61"
+    classIndex = "28" classType = "rAli"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/plant.mo" startLine = "9" startColumn = "1" endLine = "9" endColumn = "13" fileWritable = "true">
+    <Real fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.ID"
+    valueReference = "1129"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "0" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "31" fileWritable = "true">
+    <Integer start="1960447" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "ctr.p.MyMagicNumber"
+    valueReference = "1130"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "51" fileWritable = "true">
+    <Integer fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.ID"
+    valueReference = "1131"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "2" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "31" fileWritable = "true">
+    <Integer start="1960447" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "m.p.MyMagicNumber"
+    valueReference = "1132"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "51" fileWritable = "true">
+    <Integer fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.ID"
+    valueReference = "1133"
+    variability = "parameter" isDiscrete = "true"
+    causality = "parameter" isValueChangeable = "true"
+    alias = "noAlias"
+    classIndex = "4" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "4" startColumn = "1" endLine = "4" endColumn = "31" fileWritable = "true">
+    <Integer start="1960447" fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "plant.p.MyMagicNumber"
+    valueReference = "1134"
+    variability = "parameter" isDiscrete = "true"
+    causality = "calculatedParameter" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "5" classType = "iPar"
+    isProtected = "false" hideResult = ""
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/parameters.mo" startLine = "6" startColumn = "1" endLine = "6" endColumn = "51" fileWritable = "true">
+    <Integer fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition1"
+    valueReference = "1135"
+    description = "sample(3, 0.0, Prm.Tw)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "0" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/wind.mo" startLine = "8" startColumn = "5" endLine = "15" endColumn = "13" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition2"
+    valueReference = "1136"
+    description = "sample(2, 0.0, m.p.T)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "1" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "43" startColumn = "1" endLine = "59" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition3"
+    valueReference = "1137"
+    description = "time &gt; m.p.HORIZON"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "2" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/monitor.mo" startLine = "43" startColumn = "1" endLine = "59" endColumn = "9" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+  <ScalarVariable
+    name = "$whenCondition4"
+    valueReference = "1138"
+    description = "sample(1, 0.0, Prm.T)"
+    variability = "discrete" isDiscrete = "true"
+    causality = "local" isValueChangeable = "false"
+    alias = "noAlias"
+    classIndex = "3" classType = "bAlg"
+    isProtected = "true" hideResult = "true"
+    fileName = "/home/pikarz1/Desktop/exam/2023-01-20-Anthony-DiPietro-1960447/5/ctr.mo" startLine = "14" startColumn = "5" endLine = "19" endColumn = "13" fileWritable = "true">
+    <Boolean fixed="true" />
+  </ScalarVariable>
+
+
+
+  </ModelVariables>
+
+
+</fmiModelDescription>
+
